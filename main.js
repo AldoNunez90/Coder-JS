@@ -1,8 +1,15 @@
+let cantidadSolicitada = parseInt (prompt("Cantidad: \n(Mínimo 50)"))
+let minimo = 50
 
-
-let cantidad = parseInt(prompt("Cantidad: "));
-let costo1 = 1500;
-
-let resultado = cantidad * costo1 
-
-alert("Subtotal: $" + resultado);
+if ((cantidadSolicitada == "") || (isNaN(cantidadSolicitada))){
+    alert("Debe ingresar una cantidad")
+}
+else if (cantidadSolicitada == minimo) {
+    alert ("La cantidad es igual al mínimo")
+}
+else if (cantidadSolicitada < minimo){
+    alert ("La cantidad no llega al mínimo")
+}
+else if (cantidadSolicitada > minimo){
+    alert("La cantidad supera el mínimo")
+}
