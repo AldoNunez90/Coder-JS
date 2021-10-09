@@ -1,15 +1,19 @@
-let cantidadSolicitada = parseInt (prompt("Cantidad: \n(Mínimo 50)"))
-let minimo = 50
+let compra = prompt("¿Querés agregar a tu carrito un brownie, muffin, budin o nada?") .toLocaleLowerCase ();
 
-if ((cantidadSolicitada == "") || (isNaN(cantidadSolicitada))){
-    alert("Debe ingresar una cantidad")
-}
-else if (cantidadSolicitada == minimo) {
-    alert ("La cantidad es igual al mínimo")
-}
-else if (cantidadSolicitada < minimo){
-    alert ("La cantidad no llega al mínimo")
-}
-else if (cantidadSolicitada > minimo){
-    alert("La cantidad supera el mínimo")
+while(compra != "nada" ){
+   switch (compra) {
+       case "brownie":
+            alert("Agregaste un brownie!");
+            break;
+        case "muffin":
+            alert("Agregaste un muffin!");
+            break;
+        case "budin":
+            alert("Agregaste un budin!");
+            break;
+       default:
+           alert("¡Por favor, elegí una de las opciones!")
+           break;
+   }
+   compra = prompt("¿Algo más? ¿brownie, muffin, budin? ¿nada?") .toLocaleLowerCase ();
 }
