@@ -7,8 +7,6 @@ let propina = 0;
 let descuento = 0;
 let envio = 0;
 
-// Al simulador de la clase anterior le agregué el objeto Dulce, para indicar luego de la eleccion de la base los detalles de la preparación elegida. Se invoca en el case correspondiente del switch.
-
 
 class Dulce{
     constructor(preparacion, precio, sabor, presentacion){
@@ -16,17 +14,46 @@ class Dulce{
         this.precio = precio
         this.sabor = sabor
         this.presentacion = presentacion
-        this.mostrar = function() { alert("Elegiste: "+this.preparacion+", su precio es: "+this.precio+", Sabor: "+this.sabor+", viene por: "+this.presentacion) }
-    };
-} 
+        this.mostrar = function() { alert("Elegiste: "+this.preparacion+", su precio es: $"+this.precio+", Sabor: "+this.sabor+", viene por: "+this.presentacion) }
+      };
+   } 
+   
+   //Array de objetos para agrupar los productos
+   const bases = []
 
-const brownie = new Dulce ("Brownie","$300", "Chocolate", "Unidad");
-const budin = new Dulce ("Budin", "$280", "Limon", "Porción");
-const muffin = new Dulce ("Muffin", "$200", "Vainilla", "Unidad");
-const cookies = new Dulce ("Coockies", "$150", "Red velvet", "TriPack");
+   const brownie = new Dulce ("Brownie", 300, "Chocolate", "Unidad");
+   bases.push(brownie);
+   
+   const budin = new Dulce ("Budin", 280, "Limon", "Porción");
+   bases.push(budin);
+   
+   const muffin = new Dulce ("Muffin", 200, "Chocolate", "Unidad");
+   bases.push(muffin);
+   
+   const cookies = new Dulce ("Coockies", 150, "Red velvet", "TriPack");
+   bases.push(cookies);
 
-    
-function menuBase() {
+   
+
+   const preciosBajos = base => base.precio < 250;
+   const ofertas = bases.filter(preciosBajos);
+
+   let mostrarOfertas = ofertas.map( function(enOferta) {
+      return enOferta.preparacion
+   });
+
+   //Muestra en consola las ofertas que también salen por un alert al comienzo del diálogo con el usuario
+   console.log("Ofertas actuales "+mostrarOfertas.join("+"))  
+
+   const saborChocolate = variedad => variedad.sabor == "Chocolate";
+   const choco = bases.filter(saborChocolate);
+//Otro uso de filter, para verificar qué productos hay de un sabor
+   console.log(choco)
+
+
+
+   
+   function menuBase() {
     while (isNaN(comida) || comida == 0 || comida > 4) {
     comida = parseInt(prompt("Elegí la base:\n(Ingresá el número junto a la opción) \n 1- Brownie ($300)\n 2- Muffin ($200)\n 3- Budin ($280)\n 4- Cookies ($150)"));
     }
@@ -60,6 +87,33 @@ function menuBase() {
 
         
                 }
+
+
+const listaToppings = [
+   {id:1, producto: "Oreos", precio: 50},
+   {id:4, producto: "Granola", precio: 80},
+   {id:2, producto: "Chocolate", precio: 30},
+   {id:3, producto: "Frutas", precio: 70},
+];
+
+listaToppings.sort (function (a, b){
+   if (a.precio > b.precio) {
+      return 1;
+   }
+   if (a.precio < b.precio){
+      return -1;
+   }
+   return 0;
+})
+console.log(listaToppings)
+//Muestra el array listaToppings ordenado por precio
+
+for (const elemento of listaToppings) {
+   console.log("Disponibles: "+elemento.producto+" $"+elemento.precio);
+}
+//Por consola, los productos disponibles de otra lista
+
+
 
 function agregarToppings () {
     while (isNaN(topping) || topping == 0 || topping > 4) {    
@@ -136,6 +190,8 @@ function costoEnvio () {
 }
 
 alert ("Vamos a armar tu menú:")
+//Alert con las ofertas que también salen por consola
+alert ("Hoy tenemos en oferta: "+ `${mostrarOfertas.join(" - ")}`)
 menuBase()
 agregarToppings()
 agregarPropina()
