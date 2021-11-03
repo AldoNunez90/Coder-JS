@@ -17,6 +17,9 @@
 .principales, .toppings {
     width: 150px;
 }
+.carritoTotal {
+  border-top: 2px solid red
+}
 
 
 .card {
@@ -28,7 +31,7 @@
     font-family: arial; 
   }
   
-  .agregar, .cuenta__final__btn, #addDir {
+  .agregar, .finalizarCompra, #addDir {
     border: none;
     outline: 0;
     padding: 12px;
@@ -39,6 +42,14 @@
     width: 100%;
     font-size: 18px;
   }
+
+  .finalizarCompra {
+    width: 15%;
+  }
+ .agregados 
+{
+  border-top: red solid 3px
+}
   #addDir{ 
     width: 10%;
     height: 10%;
@@ -97,12 +108,6 @@ h5 {
     background-color: rgba(95, 158, 160, 0.384);
 }
 
-.total {
-    height: 400px;
-    width: 400px;
-    border: 5px red solid;
-}
-
 .cuenta__final {
   display: flex;
   justify-content: space-evenly;
@@ -154,6 +159,10 @@ h5 {
     max-height: 150px;
   }
 
+}
+
+.sumaFinal{
+  margin-left: 3vw;
 }
 h4 {
   align-self: center;

@@ -75,7 +75,7 @@ bases.forEach(item => {
 })
 
 document.getElementById("productos").innerHTML = elementos
-console.log(bases)
+
 
 
 
@@ -143,7 +143,12 @@ direccion.addEventListener('keypress', (event) => {
 let agregarProductosAlCarrito = document.querySelectorAll('.agregar')
 agregarProductosAlCarrito.forEach((agregarBtn) => {
     agregarBtn.addEventListener('click', agregarAlCarrito);
-})
+});
+
+let finalizarLaCompra = document.querySelector('.finalizarCompra');
+finalizarLaCompra.addEventListener('click', terminarLaCompra);
+
+
 
 function agregarAlCarrito(event) {
     let button = event.target;
@@ -159,6 +164,18 @@ function agregarAlCarrito(event) {
 let resumenContainer = document.querySelector('.resumen__Container')
 
 function agregarAlListadoDeCarrito (itemImg, itemPrecio, itemPreparacion) {
+
+    let preparacionesRepetidas = resumenContainer.getElementsByClassName('resumenCompras__preparacion')
+    for (let i=0; i< preparacionesRepetidas.length; i++) {
+        if (preparacionesRepetidas[i].innerText === itemPreparacion) {
+            cantidadItems = preparacionesRepetidas[i].parentElement.parentElement.parentElement.querySelector('.resumenCompras__cantidad__solicitada')   
+            cantidadItems.value++;
+            sumarCuenta();
+            return;
+        };
+    }
+
+
     let resumenCarrito = document.createElement('div');
     let contenidoCarrito = `<div class="resumenContainer">
         <div class="row resumenCompras">
@@ -189,6 +206,14 @@ function agregarAlListadoDeCarrito (itemImg, itemPrecio, itemPreparacion) {
     resumenCarrito.innerHTML = contenidoCarrito;
     resumenContainer.append(resumenCarrito)
 
+    resumenCarrito
+    .querySelector('.buttonDelete')
+    .addEventListener('click', eliminarItem)
+
+    resumenCarrito
+    .querySelector('.resumenCompras__cantidad__solicitada')    
+    .addEventListener('change', cambiarCantidad)
+
     sumarCuenta()
 }
 
@@ -202,17 +227,36 @@ function sumarCuenta() {
     let itemsCarrito = document.querySelectorAll('.resumenContainer');
 
     itemsCarrito.forEach((itemCarrito) => {
-       let itemPrecio = itemCarrito.querySelector('.resumenCompras__precio__unidad')
-       let precioUnitario =Number(itemPrecio.textContent.replace('$', '' ))
+       let itemPrecio = itemCarrito.querySelector('.resumenCompras__precio__unidad');
+       let precioUnitario = Number(itemPrecio.textContent.replace('$', ''));
 
-       let cantidadSolicitada = itemCarrito.querySelector('.resumenCompras__cantidad__solicitada')
+       let cantidadSolicitada = itemCarrito.querySelector('.resumenCompras__cantidad__solicitada');
        
-       let cantidadTotal = Number(cantidadSolicitada.value)
+       let cantidadTotal = Number(cantidadSolicitada.value);
        
        total = total + precioUnitario * cantidadTotal
-       console.log(total)
+     
     });
 
     sumaFinal.innerHTML = `
        $ ${total}`
+}
+
+function eliminarItem (event) {
+    let eliminarItemPedido = event.target;
+    eliminarItemPedido.closest('.resumenContainer').remove();
+    sumarCuenta();
+}
+
+function cambiarCantidad (event) {
+    let cambioDeCantidad = event.target
+    if (cambioDeCantidad.value <= 0) {
+        cambioDeCantidad.value = 1; 
+    }
+    sumarCuenta()
+}
+
+function terminarLaCompra () {
+    resumenContainer.innerHTML = '';
+    sumarCuenta()
 }

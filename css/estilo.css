@@ -97,6 +97,9 @@ li {
 .principales, .toppings {
   width: 150px; }
 
+.carritoTotal {
+  border-top: 2px solid red; }
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 250px;
@@ -105,7 +108,7 @@ li {
   text-align: center;
   font-family: arial; }
 
-.agregar, .cuenta__final__btn, #addDir {
+.agregar, .finalizarCompra, #addDir {
   border: none;
   outline: 0;
   padding: 12px;
@@ -115,6 +118,12 @@ li {
   cursor: pointer;
   width: 100%;
   font-size: 18px; }
+
+.finalizarCompra {
+  width: 15%; }
+
+.agregados {
+  border-top: red solid 3px; }
 
 #addDir {
   width: 10%;
@@ -167,11 +176,6 @@ h5 {
   margin: 1rem;
   background-color: rgba(95, 158, 160, 0.384); }
 
-.total {
-  height: 400px;
-  width: 400px;
-  border: 5px red solid; }
-
 .cuenta__final {
   display: flex;
   justify-content: space-evenly; }
@@ -215,6 +219,9 @@ h5 {
   .resumenCompras__img {
     max-width: 150px;
     max-height: 150px; }
+
+.sumaFinal {
+  margin-left: 3vw; }
 
 h4 {
   align-self: center;
