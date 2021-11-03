@@ -1,0 +1,27 @@
+
+
+@import "./partials/index";
+@import "./partials/_pedidos.scss";
+@import "./partials/_quienesSomos.scss";
+@import "./partials/cuenta.scss";
+
+* {
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    list-style: none;
+    text-decoration: unset !important;
+}
+
+
+nav {
+    display: flex;
+    text-align: center;
+}
+.navbar {
+    padding-top: 0.9rem;
+}
+.logoMarca {
+    margin-left: 5vw;
+}
+
+

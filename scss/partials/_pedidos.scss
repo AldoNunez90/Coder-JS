@@ -1,0 +1,177 @@
+.container__toppings {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.container__pedidos {
+  max-width: 90%;
+
+}
+#pedido__principal, #pedido__topping {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.principales, .toppings {
+    width: 150px;
+}
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    margin: auto;
+    margin-bottom: 3vh;
+    text-align: center;
+    font-family: arial; 
+  }
+  
+  .agregar, .cuenta__final__btn, #addDir {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color:  white;
+    background-color: #1b4652;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  #addDir{ 
+    width: 10%;
+    height: 10%;
+    padding: 5px;
+    margin: 0;
+  }
+  .card .agregar:hover {
+    opacity: 0.7;
+  }
+.recuadro {
+height: 300px;
+width: 200px;
+  border: red, solid, 5px;
+}
+  hr {
+      color: aqua;
+      height: 10px !important;
+  }
+  #productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .agregados {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    &__propina{
+    width: 40%;
+    height: 30vh;
+    border: solid cadetblue 8px;
+    border-radius: 5px;
+    }
+
+    &__descuentos {
+        width: 40%;
+        height: 30vh;
+        border: solid cadetblue 8px;
+        border-radius: 5px;
+    }
+  }
+h5 {
+    font-size: 30px;
+}
+ 
+.button {
+    text-align: center;
+    align-content: center;
+}
+
+.agregados__propina__valor {
+    font-size: 20px;
+    padding: 5px;
+    margin: 1rem;
+    background-color: rgba(95, 158, 160, 0.384);
+}
+
+.total {
+    height: 400px;
+    width: 400px;
+    border: 5px red solid;
+}
+
+.cuenta__final {
+  display: flex;
+  justify-content: space-evenly;
+  &__btn {
+    width: 20%;
+    margin: 5rem 0;
+  }
+}
+.descripcion{
+  font-size: 3vh;
+}
+.resumen {
+  border: solid 2px red;
+}
+.resumen__cuenta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__total {
+     background-color: whitesmoke;
+     height: 5rem;
+     width: 20rem;
+     margin: 5vh 0;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     border-radius: 3px;
+  }
+}
+
+.listaDeCompra {
+  width: 40%;
+  border: 3px solid black;
+  min-height: 10rem;
+}
+
+.resumenContainer {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+.resumenCompras{
+  
+  max-width: 90%;
+  
+  &__img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+}
+h4 {
+  align-self: center;
+  margin: revert;
+}
+h2 {
+  margin-bottom: 2rem;
+}
+.encabezadoResumen{
+max-width: 90%;
+}
+
+.categorias {
+  border-bottom: red 1px solid;
+}
+
+.recuadroCantidad {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

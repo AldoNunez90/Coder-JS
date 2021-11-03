@@ -1,0 +1,272 @@
+.hero {
+  text-align: -webkit-center; }
+
+.maxNoventaycinco {
+  max-width: 95%; }
+
+.navegacion__espacio {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%; }
+
+.carousel {
+  margin-bottom: 7vh; }
+
+.carousel-item {
+  height: 100vh; }
+
+.pastel1, .pastel2 {
+  display: flex;
+  flex-direction: row; }
+
+.descripcion, .descripcion2 {
+  align-self: center; }
+
+.maximoCienNoventa {
+  max-width: 100%;
+  max-height: 90%; }
+
+.fotoCierre {
+  max-width: 100%;
+  padding-bottom: 7vh;
+  max-width: 95%; }
+
+.container__footer {
+  background-color: black;
+  color: whitesmoke; }
+  .container__footer__back {
+    max-width: 100%;
+    position: relative; }
+  .container__footer__logoRedes {
+    width: 30px;
+    height: 30px; }
+
+.container__footer__nav {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-image: url(../../media/pastry19b.jpg);
+  background-size: cover;
+  height: 60vh; }
+  .container__footer__nav__links {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 100;
+    text-align: left;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .container__footer__nav__redes {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 100;
+    text-align: right;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 2vw; }
+
+li {
+  padding-bottom: 2vh; }
+
+.container__footer__transparencia {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.603);
+  width: 100%;
+  height: 60%;
+  z-index: 10; }
+
+.container__toppings {
+  display: flex;
+  text-align: center;
+  flex-direction: column; }
+
+.container__pedidos {
+  max-width: 90%; }
+
+#pedido__principal, #pedido__topping {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  flex-wrap: wrap; }
+
+.principales, .toppings {
+  width: 150px; }
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 250px;
+  margin: auto;
+  margin-bottom: 3vh;
+  text-align: center;
+  font-family: arial; }
+
+.agregar, .cuenta__final__btn, #addDir {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #1b4652;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px; }
+
+#addDir {
+  width: 10%;
+  height: 10%;
+  padding: 5px;
+  margin: 0; }
+
+.card .agregar:hover {
+  opacity: 0.7; }
+
+.recuadro {
+  height: 300px;
+  width: 200px;
+  border: red, solid, 5px; }
+
+hr {
+  color: aqua;
+  height: 10px !important; }
+
+#productos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.agregados {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; }
+  .agregados__propina {
+    width: 40%;
+    height: 30vh;
+    border: solid cadetblue 8px;
+    border-radius: 5px; }
+  .agregados__descuentos {
+    width: 40%;
+    height: 30vh;
+    border: solid cadetblue 8px;
+    border-radius: 5px; }
+
+h5 {
+  font-size: 30px; }
+
+.button {
+  text-align: center;
+  align-content: center; }
+
+.agregados__propina__valor {
+  font-size: 20px;
+  padding: 5px;
+  margin: 1rem;
+  background-color: rgba(95, 158, 160, 0.384); }
+
+.total {
+  height: 400px;
+  width: 400px;
+  border: 5px red solid; }
+
+.cuenta__final {
+  display: flex;
+  justify-content: space-evenly; }
+  .cuenta__final__btn {
+    width: 20%;
+    margin: 5rem 0; }
+
+.descripcion {
+  font-size: 3vh; }
+
+.resumen {
+  border: solid 2px red; }
+
+.resumen__cuenta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .resumen__cuenta__total {
+    background-color: whitesmoke;
+    height: 5rem;
+    width: 20rem;
+    margin: 5vh 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 3px; }
+
+.listaDeCompra {
+  width: 40%;
+  border: 3px solid black;
+  min-height: 10rem; }
+
+.resumenContainer {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem; }
+
+.resumenCompras {
+  max-width: 90%; }
+  .resumenCompras__img {
+    max-width: 150px;
+    max-height: 150px; }
+
+h4 {
+  align-self: center;
+  margin: revert; }
+
+h2 {
+  margin-bottom: 2rem; }
+
+.encabezadoResumen {
+  max-width: 90%; }
+
+.categorias {
+  border-bottom: red 1px solid; }
+
+.recuadroCantidad {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.resumen__cuenta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .resumen__cuenta__total {
+    background-color: whitesmoke;
+    height: 5rem;
+    width: 20rem;
+    margin: 5vh 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 3px; }
+
+.listaDeCompra {
+  width: 40%;
+  border: 3px solid black;
+  min-height: 10rem; }
+
+* {
+  font-family: 'Nunito', sans-serif;
+  padding: 0;
+  list-style: none;
+  text-decoration: unset !important; }
+
+nav {
+  display: flex;
+  text-align: center; }
+
+.navbar {
+  padding-top: 0.9rem; }
+
+.logoMarca {
+  margin-left: 5vw; }

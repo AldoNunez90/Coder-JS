@@ -1,0 +1,36 @@
+/* CSS HEX */
+--nile-blue: #1b4652;
+--sorrell-brown: #cfb198;
+--tradewind: #68beb2; VERDE
+--smalt-blue: #51898d; PARECIDO AL VERDE
+--cutty-sark: #517b72; MAS PASTEL
+--bunker: #131b1c; OSCURO
+--pine-cone: 	; NARANJA
+--black-pearl: #081b2c; AZUL OSCURO
+--gothic: #739cac; CELESTITO
+
+
+/* SCSS HEX */
+$nile-blue: #1b4652;
+$sorrell-brown: #cfb198;
+$tradewind: #68beb2;
+$smalt-blue: #51898d;
+$cutty-sark: #517b72;
+$bunker: #131b1c;
+$pine-cone: #705a4e;
+$black-pearl: #081b2c;
+$gothic: #739cac;
+
+
+/* SCSS RGB */
+--nile-blue: rgba(27,70,82,1);
+--sorrell-brown: rgba(207,177,152,1);
+--tradewind: rgba(104,190,178,1);
+--smalt-blue: rgba(81,137,141,1);
+--cutty-sark: rgba(81,123,114,1);
+--bunker: rgba(19,27,28,1);
+--pine-cone: rgba(112,90,78,1);
+--black-pearl: rgba(8,27,44,1);
+--gothic: rgba(115,156,172,1);
+
+
